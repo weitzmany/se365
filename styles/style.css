@@ -85,3 +85,7 @@ form.delete{
     background-color: #f1bfb2;
     border-color: red;
 }
+.message.warning{
+    background-color: #f5ffbc;
+    border-color: yellow;
+}

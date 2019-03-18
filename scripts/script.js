@@ -25,11 +25,15 @@ function validate(form){
 
     if(!nameTest.test(name)){
         nameInput.classList.add('error');
+        var message = document.getElementById("nameMessage");
+        message.classList.remove("hidden");
         return false;
     }
 
     if(!phoneTest.test(phone)){
         phoneInput.classList.add('error');
+        var message = document.getElementById("phoneMessage");
+        message.classList.remove("hidden");
         return false;
     }
 }

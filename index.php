@@ -28,6 +28,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	<script src="scripts/script.js"></script>
 </head>
 <body>
+<div class="message warning hidden" id="nameMessage">
+	Name must include at least 2 chars using letters and numbers.
+</div>
+
+<div class="message warning hidden" id="phoneMessage">
+	Phone must include at least 10 chars using only numbers.
+</div>
 <?
 include 'list.php';
 ?>
