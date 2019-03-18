@@ -23,12 +23,15 @@ function validate(form){
     var nameTest = RegExp('[a-zA-Z0-9]{2}');
     var phoneTest = RegExp('[0-9]{10}');
 
+    var failed = false;
+
     if(!nameTest.test(name)){
         nameInput.classList.add('error');
         var message = document.getElementById("nameMessage");
         message.classList.remove("hidden");
-        return false;
+        failed = true;
     }else{
+        nameInput.classList.remove('error');
         var message = document.getElementById("nameMessage");
         message.classList.add("hidden");
     }
@@ -37,9 +40,13 @@ function validate(form){
         phoneInput.classList.add('error');
         var message = document.getElementById("phoneMessage");
         message.classList.remove("hidden");
-        return false;
+        failed = true;
+        
     }else{
+        phoneInput.classList.remove('error');
         var message = document.getElementById("phoneMessage");
         message.classList.add("hidden");
     }
+
+    if(failed) return false;
 }
