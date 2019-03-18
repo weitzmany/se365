@@ -28,6 +28,9 @@ function validate(form){
         var message = document.getElementById("nameMessage");
         message.classList.remove("hidden");
         return false;
+    }else{
+        var message = document.getElementById("nameMessage");
+        message.classList.add("hidden");
     }
 
     if(!phoneTest.test(phone)){
@@ -35,5 +38,8 @@ function validate(form){
         var message = document.getElementById("phoneMessage");
         message.classList.remove("hidden");
         return false;
+    }else{
+        var message = document.getElementById("phoneMessage");
+        message.classList.add("hidden");
     }
 }
